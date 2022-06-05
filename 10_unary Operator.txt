@@ -1,0 +1,5 @@
+++  ->> a a  + 1
+-- ->> a=a -1
+- negative
++ postivie
+! boolean kebalikan

@@ -1,0 +1,42 @@
+
+install golang
+
+
+mkdir _eki-latihan-golang-dasar
+cd _eki-latihan-golang-dasar
+
+unset GOROOT
+git init
+go mod init ekitesting
+
+
+
+SPESIFC BUILD FOLDER
+ 
+go run .\20_function.go
+//go run .\20_function.go build -o D:\_GO_BUILD\  
+//go run .\20_function.go build -o .\_GO_BUILD\  (WINDOWS)
+//go run ./20_function.go build -o ./_GO_BUILD/  (LINUX)
+
+go build -o .\_GO_BUILD\
+
+
+AVAST ANTIVIRUS exceptions :  (default path go build)
+%USERPROFILE%\go
+
+
+https://dasarpemrogramangolang.novalagung.com/A-instalasi-editor.html
+//https://go.dev/doc/tutorial/compile-install
+
+jgn lupa instal GO extensvisual studio code https://code.visualstudio.com/docs/languages/go
+
+
+reference : 
+https://www.youtube.com/playlist?list=PL-CtdCApEFH_t5_dtCQZgWJqWF45WRgZw
+https://github.com/ProgrammerZamanNow/belajar-golang-dasar
+https://dasarpemrogramangolang.novalagung.com/A-setup-go-project-dengan-go-modules.html
+
+
+ 
+
+
