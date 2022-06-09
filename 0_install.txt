@@ -21,6 +21,12 @@ go run .\20_function.go
 go build -o .\_GO_BUILD\
 
 
+
+
+
+go run -x .\20_function.go
+
+
 AVAST ANTIVIRUS exceptions :  (default path go build)
 %USERPROFILE%\go
 
