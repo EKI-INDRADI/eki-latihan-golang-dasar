@@ -65,7 +65,7 @@ func main_pass_by_reference() { // bukan duplicate / replace value / di memory y
 
 }
 
-func main() {
+func main() { // next 7:54
 	var address1 Address = Address{"Subang", "Jawa Barat", "Indonesia"}
 	// var address4 *Address = &Address{"Subang", "Jawa Barat", "Indonesia"}
 	var address2 *Address = &address1
