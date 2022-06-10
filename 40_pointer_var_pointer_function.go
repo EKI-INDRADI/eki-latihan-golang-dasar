@@ -6,7 +6,8 @@ type Address struct {
 	City, Province, Country string
 }
 
-func ChangeCountryToIndonesia(address *Address) {
+func ChangeCountryToIndonesia(address *Address) { // <=== ini adalah value asli yang akan berubah (country di main berubah jadi indonesia)
+	//func ChangeCountryToIndonesia(address Address) { <=== ini adalah value duplicate nya yg berubah (countery tidak ada)
 	address.Country = "Indonesia"
 }
 
@@ -50,7 +51,14 @@ func main_pass_by_reference() { // bukan duplicate / replace value / di memory y
 
 	address2 := &addressl // & = POINTER =  membuat pointer agar value pass by reference / replace value / memory data sama
 
-	// address2 := &addressl    sama dengan     *address2 := addressl     ( & = POINTER , * = POINTER)
+	// address2 := &addressl    sama dengan     address2 *address2 = &addressl   (menggunakan tipe data)   ( & = POINTER , * = POINTER)
+
+	// ini kalo di masukan tipe datanya sama saja
+
+	// var addressl Address = Address{"Subang", "Jawa Barat", "Indonesia"}
+	// var address2 *Address= &addressl
+
+	// Operator * = penanda itu adalah pointer ke data yang mana
 
 	address2.City = "Bandung" // jika address2 berubah maka address1 juga berubah
 
@@ -61,25 +69,28 @@ func main_pass_by_reference() { // bukan duplicate / replace value / di memory y
 
 	// 	result :
 	// {Bandung Jawa Barat Indonesia}
-	// &{Bandung Jawa Barat Indonesia}
+	// &{Bandung Jawa Barat Indonesia} // agar tidak muncul & di depan
 
 }
 
-func main() { // next 7:54
+func main() { //
 	var address1 Address = Address{"Subang", "Jawa Barat", "Indonesia"}
-	// var address4 *Address = &Address{"Subang", "Jawa Barat", "Indonesia"}
+	// var address4 *Address = &Address{"Subang", "Jawa Barat", "Indonesia"}  // BIKIN DATA BARU (YG BERISI DATA)
 	var address2 *Address = &address1
 	var address3 *Address = &address1
 
 	address2.City = "Bandung"
 
-	*address2 = Address{"Malang", "Jawa Timur", "Indonesia"}
+	*address2 = Address{"Malang", "Jawa Timur", "Indonesia"} // jika begini semua address1 (memory) di paksa pindah ke address2 (memory) , artinya address3 pun mengikuti address2
+	// itulah fungsi dari *   (mengacu ke memory yg paling baru)
 
-	fmt.Println(address1)
-	fmt.Println(address2)
-	fmt.Println(address3)
+	// 11:00 https://www.youtube.com/watch?v=uhF5MVmYwA4&list=PL-CtdCApEFH_t5_dtCQZgWJqWF45WRgZw&index=40
 
-	var address4 *Address = new(Address)
+	fmt.Println(address1) //{"Malang", "Jawa Timur", "Indonesia"}
+	fmt.Println(address2) //&{"Malang", "Jawa Timur", "Indonesia"}
+	fmt.Println(address3) //&{"Malang", "Jawa Timur", "Indonesia"}
+
+	var address4 *Address = new(Address) // membuat pointer baru , bedanya new hanya mengembalikan pointer ke data kosong (tidak ada awal data)
 	address4.City = "Jakarta"
 	fmt.Println(address4)
 
@@ -88,6 +99,8 @@ func main() { // next 7:54
 		Province: "Jawa Barat",
 		Country:  "",
 	}
+	// ChangeCountryToIndonesia(alamat) // bakalan error karena alamat bukan pointer
+	// 	ChangeCountryToIndonesia(&lamat) //tidak error karena menggunakan pointer
 	var alamatPointer *Address = &alamat
 	ChangeCountryToIndonesia(alamatPointer)
 	fmt.Println(alamat)
