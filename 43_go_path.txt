@@ -1,0 +1,32 @@
+windows search > system environtment variables > GOPATH
+
+
+
+tujuan GOPATH , 
+apabila menggunakan library atau  lebih dari 1 file untuk project , maka wajib setup GOPATH ,
+keperluan untuk memanggil file, import , libary, struct , dll 
+
+secara default windows sudah di setup lokasinya : 
+GOPATH = %USERPROFILE%\go  atau C:\Users\USERS_NAME\go , ex: C:\Users\eki_i\go
+
+rubah ke
+GOPATH = D:\_GOPATH_GOLANG_PROJECT
+
+keperluan untuk nyimpen project golang
+
+UNIX / MAC  https://www.youtube.com/watch?v=eJVq-idZDMo&list=PL-CtdCApEFH_t5_dtCQZgWJqWF45WRgZw&index=43
+
+
+pada folder buatlah folder src
+jadi D:\_GOPATH_GOLANG_PROJECT\src 
+
+
+
+
+
+
+
+
+
+
+
