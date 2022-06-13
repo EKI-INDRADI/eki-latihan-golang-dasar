@@ -1,10 +1,10 @@
-package database
+package database_46
 
 import "fmt"
 
 var connection string
 
-func init(){
+func init() { //46. package initialization
 	fmt.Println("Init dipanggil")
 	connection = "MySQL"
 }
