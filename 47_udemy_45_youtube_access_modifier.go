@@ -14,6 +14,10 @@ import (
 	// unset GOROOT
 	// git init
 	// go mod init ekitesting
+
+	// go env -w GO111MODULE=off  // DISABLE GO MODULES
+	// go env -w GO111MODULE=on  // ENABLE GO MODULES  <<< kalo go modules wajib pake ini
+
 	"ekitesting/helper_44"
 	"ekitesting/other_44"
 	"fmt"
