@@ -18,11 +18,54 @@ go run .\20_function.go
 //go run .\20_function.go build -o .\_GO_BUILD\  (WINDOWS)
 //go run ./20_function.go build -o ./_GO_BUILD/  (LINUX)
 
+
+
+
 go build -o .\_GO_BUILD\
 
 
+//========== LOCATION
+https://stackoverflow.com/questions/44765256/go-unit-test-runs-from-appdata
+
+C:\> cd dev\projects\src\mygotest
+C:\dev\projects\src\mygotest>echo %CD%
+C:\dev\projects\src\mygotest
+
+C:\dev\projects\src\mygotest>set TMP=%CD%
+
+C:\dev\projects\src\mygotest>go test -x
+WORK=C:\dev\projects\src\mygotest\go-build306298926
+mkdir -p $WORK\mygotest\_test\
+mkdir -p $WORK\mygotest\_test\_obj_test\
+cd C:\dev\projects\src\mygotest
+"C:\\Go\\pkg\\tool\\windows_amd64\\compile.exe" -o "C:\\dev\\projects\\src\\mygotest\\go-build306298926\\mygotest\\_test\\mygotest.a" -trimpath "C:\\dev\\projects\\src\\mygotest\\go-build306298926" -p main -complete -buildid 86cb7a423d355c7468ad98c4f8bffe77b68d2265 -D _/C_/dev/projects/src/mygotest -I "C:\\dev\\projects\\src\\mygotest\\go-build306298926" -pack "C:\\dev\\projects\\src\\mygotest\\sample.go" "C:\\dev\\projects\\src\\mygotest\\sample_test.go"
+cd $WORK\mygotest\_test
+"C:\\Go\\pkg\\tool\\windows_amd64\\compile.exe" -o "C:\\dev\\projects\\src\\mygotest\\go-build306298926\\mygotest\\_test\\main.a" -trimpath "C:\\dev\\projects\\src\\mygotest\\go-build306298926" -p main -complete -D "" -I "C:\\dev\\projects\\src\\mygotest\\go-build306298926\\mygotest\\_test" -I "C:\\dev\\projects\\src\\mygotest\\go-build306298926" -pack "C:\\dev\\projects\\src\\mygotest\\go-build306298926\\mygotest\\_test\\_testmain.go"
+cd .
+"C:\\Go\\pkg\\tool\\windows_amd64\\link.exe" -o "C:\\dev\\projects\\src\\mygotest\\go-build306298926\\mygotest\\_test\\mygotest.test.exe" -L "C:\\dev\\projects\\src\\mygotest\\go-build306298926\\mygotest\\_test" -L "C:\\dev\\projects\\src\\mygotest\\go-build306298926" -w -extld=gcc -buildmode=exe "C:\\dev\\projects\\src\\mygotest\\go-build306298926\\mygotest\\_test\\main.a"
+$WORK\mygotest\_test\mygotest.test.exe
+Hello, playground
+PASS
+ok      mygotest        0.526s
+
+C:\dev\projects\src\mygotest>
 
 
+https://groups.google.com/g/golang-nuts/c/Kwuto2AzsKo
+https://stackoverflow.com/questions/46570617/how-to-change-default-path-to-store-executable-in-go-compiler
+
+
+go build -o /usr/bin/app main.go
+
+
+
+go run .\54_container-list.go
+------------------ WINDOWS WITHOUT ANTIVIRUS ISSUE 
+go build -o .\_GO_BUILD\ 54_container-list.go 
+start .\_GO_BUILD\54_container-list.exe
+------------------ WINDOWS WITHOUT ANTIVIRUS ISSUE 
+
+//========== LOCATION
 
 go run -x .\20_function.go
 

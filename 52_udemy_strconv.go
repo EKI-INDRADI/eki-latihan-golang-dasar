@@ -14,9 +14,12 @@ func main() {
 	// strconv.parseBool(string) Mengubah string ke bool
 	// strconv.parseFloat(string) Mengubah string ke float
 	// strconv.parselnt(string) Mengubah string ke int64
-	// strconv.FormatBool(bool)
+	// strconv.FormatBool(bool) Mengubah  bool -> string
 	// strconv.FormatFloat(float, ... ) Mengubah float64 ke string
 	// strconv.Formatint(int, ... ) Mengubah int64 ke string
+
+	//format ke string
+	//parse kle number / boolean
 
 	boolean, err := strconv.ParseBool("true")
 	// hampir setiap strconv mengembalikan 2 value (data,error)
