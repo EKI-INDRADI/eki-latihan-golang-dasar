@@ -50,7 +50,7 @@ func main() {
 	// 	// index i should sort before the element with index j.
 	// 	Less(i, j int) bool // apakah i lebih kecil dari J jika benar ==  true
 	// 	// Swap swaps the elements with indexes i and j.
-	// 	Swap(i, j int) // swap data dengan index i dan j
+	// 	Swap(i, j int) // swap/tuker data dengan index i dan j
 	// 	}
 
 	users := []User{
