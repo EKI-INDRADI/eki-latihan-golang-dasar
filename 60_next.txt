@@ -1,0 +1,6 @@
+Materi Selanjutnya?
+- Go-Lang Unit Test  = testing  
+- Go-Lang Modules  = dependency (node_modules di javascript)
+- Go-Lang Concurrency = suport multi core programming (mirip child process /cluster nodejs)
+- Go-Lang Database
+- Go-Lang Web 
